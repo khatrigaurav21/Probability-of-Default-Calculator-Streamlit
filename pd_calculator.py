@@ -173,3 +173,5 @@ if training_file is not None:
             X = training_df.drop('Default', axis=1)
             y = training_df['Default']
             X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+    except Exception as e:
+        st.error(f"Error processing training data: {e}")
